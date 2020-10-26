@@ -11,6 +11,20 @@ public class Problem3 {
         // homework
         // !!! must use your ArrayStack or LinkedListStack in problem 1
         // print with the following format. System.out.println() will not pass test.
+
+
+        ListNode pointer = list;
+        ListNode current = null, previous = null;
+        while (pointer != null) {
+
+            current = pointer;
+            pointer = pointer.next;
+
+            current.next = previous;
+            previous = current;
+            list = current;
+            print.println(current);
+        }
         print.println("hello world");   // place holder
     }
 }
